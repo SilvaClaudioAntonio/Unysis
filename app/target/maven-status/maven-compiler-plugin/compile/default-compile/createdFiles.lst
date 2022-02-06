@@ -1,0 +1,9 @@
+br\com\unysis\service\InvestimentoService.class
+br\com\unysis\repository\InvestimentoRepository.class
+br\com\unysis\app\App.class
+br\com\unysis\controller\ClienteController.class
+br\com\unysis\controller\InvestimentoController.class
+br\com\unysis\repository\ClienteRepository.class
+br\com\unysis\entity\InvestimentoEntity.class
+br\com\unysis\entity\ClienteEntity.class
+br\com\unysis\service\ClienteService.class

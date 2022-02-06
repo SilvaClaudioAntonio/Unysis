@@ -1,0 +1,24 @@
+package br.com.unisys.test;
+
+import static org.junit.Assert.assertEquals;
+import java.util.Optional;
+import org.junit.Test;
+import br.com.unysis.entity.ClienteEntity;
+import br.com.unysis.service.ClienteService;
+
+public class ClienteTest {
+	
+	private ClienteService oClienteService = new ClienteService();
+	
+	@Test
+	void clienteCadastro() {
+		
+		ClienteEntity oClienteEntity = new ClienteEntity();
+		oClienteEntity.setIdCliente(1);
+		oClienteEntity.setNomeCliente("IPSUM LORUM");
+		oClienteEntity.setTipoCliente("PJ");
+
+		assertEquals(oClienteService.createOrUpdateCliente(oClienteEntity), null); 
+		
+	}
+}

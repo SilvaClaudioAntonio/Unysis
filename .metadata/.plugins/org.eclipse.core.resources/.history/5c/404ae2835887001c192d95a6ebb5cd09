@@ -1,0 +1,16 @@
+package br.com.unisys.test;
+
+import static org.junit.Assert.assertTrue;
+
+import org.junit.jupiter.api.Test;
+
+public class ClienteTest {
+	
+	@Test
+	void PersisteCliente() {
+		
+		assertTrue(1 > 3);
+		
+	}
+
+}

@@ -1,0 +1,23 @@
+package app;
+
+import br.com.unysis.entity.ClienteEntity;
+import br.com.unysis.service.ClienteService;
+import junit.framework.TestCase;
+
+public class ClienteTest extends TestCase {
+
+	private	ClienteService oClienteService = new ClienteService();
+	private ClienteEntity oClienteEntity = new ClienteEntity();
+	
+	public void CadastroTest() {
+		
+		oClienteEntity.setIdCliente(1);
+		oClienteEntity.setNomeCliente("IPSUM LORUM");
+		oClienteEntity.setTipoCliente("PJ");
+		
+		oClienteService.createOrUpdateCliente(oClienteEntity);
+		assertEquals(oClienteEntity, null);
+		
+	}
+	
+}

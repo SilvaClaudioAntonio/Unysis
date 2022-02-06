@@ -1,0 +1,14 @@
+package br.com.unisys.test;
+
+import static org.junit.Assert.assertEquals;
+
+import org.junit.Test;
+
+public class JUnit5Exemplo {
+	
+	@Test
+	void meuPrimeiroTest() {
+		assertEquals(3, 1 + 1);
+	}
+
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-app="myApp">
+    <div ng-controller="appController">
+            Response Data: {{data}} <br />
+            Error: {{error}}
+    </div>
+    <script>
+    
+        var myApp = angular.module('myApp', []);
+    
+        myApp.controller("appController", function ($scope, $http) {
+       
+            var onSuccess = function (data, status, headers, config) {
+                $scope.data = data;
+            };
+
+            var onError = function (data, status, headers, config) {
+                $scope.error = status;
+            }
+        
+           var getReq = {
+                    method: 'GET',
+                    url: 'http://localhost:8080/investimentos'
+                };
+            
+            $http(getReq).success(onSuccess).error(onError);
+
+        });
+    </script>
+</body>
+</html>

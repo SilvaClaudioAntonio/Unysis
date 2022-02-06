@@ -1,0 +1,30 @@
+package br.com.unysis.service;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import br.com.unysis.entity.ClienteEntity;
+import br.com.unysis.repository.ClienteRepository;
+
+@Service
+public class ClienteService {
+	
+	@Autowired
+	ClienteRepository oClienteRepository;
+	
+	public List<ClienteEntity> getAllClientes(){
+		
+		List<ClienteEntity> oClienteList = oClienteRepository.findAll();
+		
+		if ( oClienteList.size() > 0) {
+		 	 return oClienteList;
+		}else {
+			return new ArrayList<ClienteEntity>();
+		}
+	}
+	
+	
+}
